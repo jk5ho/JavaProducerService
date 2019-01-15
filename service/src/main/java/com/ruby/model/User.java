@@ -1,16 +1,15 @@
 package com.ruby.model;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class User {
 
+  @NonNull
   private String url;
-  private String button;
 
-  public User(String url, String button) {
-    this.url = url;
-    this.button = button;
-  }
+  @NonNull
+  private String button;
 
 }
