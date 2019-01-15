@@ -16,12 +16,11 @@ docker-compose up
 * Input is defined as the button pressed and the previous page url
 * Send POST request with parameters __url__ and __button__ via POSTMAN or CURL:
 ```
-GET /demo/all HTTP/1.1
-Host: localhost:8081
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjEyMzQsInJvbGVzIjoiYWRtaW4td3JpdGUtYWxsLGFkbWluLXJlYWQtYWxsIiwicGxhdGZvcm1zIjoiYW0ifQ.p1_TzIeTiKsE21GCBwIoiIV9twFUj5jPQiBPGcTuWI1V57OQrTlZN-nO2JMnG1aBbPzq8sfUkCLde99CPOg8Ww
-cache-control: no-cache
-Postman-Token: 31dfc1f4-dca2-4d7b-99d3-01cff0d40221
-
+curl -X GET \
+  http://localhost:8081/demo/all \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjEyMzQsInJvbGVzIjoiYWRtaW4td3JpdGUtYWxsLGFkbWluLXJlYWQtYWxsIiwicGxhdGZvcm1zIjoiYW0ifQ.p1_TzIeTiKsE21GCBwIoiIV9twFUj5jPQiBPGcTuWI1V57OQrTlZN-nO2JMnG1aBbPzq8sfUkCLde99CPOg8Ww' \
+  -H 'Postman-Token: a68cbbf0-966a-4c5a-a9f2-97b7cdad00e2' \
+  -H 'cache-control: no-cache'
 ```
 
 ### Output
