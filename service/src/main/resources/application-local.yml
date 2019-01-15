@@ -5,3 +5,8 @@ jwt:
 logging:
   level:
     com.ruby: DEBUG
+
+# Default Values
+default:
+  value:
+    server: localhost:9092
