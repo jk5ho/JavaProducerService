@@ -1,0 +1,7 @@
+jwt:
+  secret: test
+  algorithm: HMACSHA512
+
+logging:
+  level:
+    com.ruby: DEBUG

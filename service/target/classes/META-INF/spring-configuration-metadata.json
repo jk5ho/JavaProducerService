@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "api",
+      "type": "com.ruby.util.config.ApiProperties",
+      "sourceType": "com.ruby.util.config.ApiProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "api.base-path",
+      "type": "java.lang.String",
+      "sourceType": "com.ruby.util.config.ApiProperties"
+    },
+    {
+      "name": "api.ignored",
+      "type": "java.util.Collection<java.lang.String>",
+      "sourceType": "com.ruby.util.config.ApiProperties"
+    }
+  ],
+  "hints": []
+}

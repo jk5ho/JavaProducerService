@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+spring:
+  application:
+    name: @service.name@
