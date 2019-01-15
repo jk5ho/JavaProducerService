@@ -16,10 +16,10 @@ docker-compose up
 * Input is defined as the button pressed and the previous page url
 * Send POST request with parameters __url__ and __button__ via POSTMAN or CURL:
 ```
-curl -X GET \
-  http://localhost:8081/demo/all \
+curl -X POST \
+  'http://localhost:8080/api/kafka/publish?url=www.urlTest.com&button=buttonTest' \
   -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjEyMzQsInJvbGVzIjoiYWRtaW4td3JpdGUtYWxsLGFkbWluLXJlYWQtYWxsIiwicGxhdGZvcm1zIjoiYW0ifQ.p1_TzIeTiKsE21GCBwIoiIV9twFUj5jPQiBPGcTuWI1V57OQrTlZN-nO2JMnG1aBbPzq8sfUkCLde99CPOg8Ww' \
-  -H 'Postman-Token: a68cbbf0-966a-4c5a-a9f2-97b7cdad00e2' \
+  -H 'Postman-Token: 678f6b6d-449f-4852-aa38-ba7b15a02b58' \
   -H 'cache-control: no-cache'
 ```
 
