@@ -1,27 +1,11 @@
 package groovy.com.ruby
 
-import com.ruby.Application
-import com.ruby.controller.KafkaController
 import com.ruby.model.User
 import com.ruby.service.Producer
-import org.junit.runner.RunWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
-import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.kafka.core.KafkaTemplate
-import org.springframework.test.context.ContextConfiguration
-import org.springframework.test.context.junit4.SpringRunner
-import org.springframework.test.context.web.WebAppConfiguration
-import org.springframework.test.web.servlet.MockMvc
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders
 import spock.lang.Specification
 
-import javax.validation.constraints.Null
-
-//@RunWith(SpringRunner.class)
-//@SpringBootTest(classes={Application.class})
-//@WebMvcTest(controllers = [KafkaController])
 class UnitSpecification extends Specification {
 
   @Autowired
@@ -67,43 +51,10 @@ class UnitSpecification extends Specification {
       1 * kafkaTemplate.send('users', new User(url, button))
   }
 
-//  @Autowired
-//  private MockMvc mvc
-//
-//  def "when post is performed then the response has status 200 and content is 'Hello world!'"() {
-//
-////    given:
-////      String jsonString ="{\"url\":\"www.urlTest.com\", \"button\":\"buttonTest\"}"
-//
-//    given:
-//      String jsonString="{\"country\": \"India\", \"currency\": \"INR\", \"president\": \"Ram Nath Kovind\" } "
-//
-//    when:
-//      def result = mvc.perform(MockMvcRequestBuilders.post("/test").content(jsonString).header("code","12400f74dc4d8d69b713b1fe53f371c25a28a8c5fac2a91eea1f742ab4567c9c"))
-//
-//    then:
-//      result.andExpect(status().isOk())
-//      result.andReturn()
-//      result.response
-//      result.contentAsString == "Hello world!"
-//  }
-
-
-//  when:
-//      def result = mvc.perform(MockMvcRequestBuilders.post("/api/kafka/publish").content(jsonString).header("Authorization", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJ1aWQiOjEyMzQsInJvbGVzIjoiYWRtaW4td3JpdGUtYWxsLGFkbWluLXJlYWQtYWxsIiwicGxhdGZvcm1zIjoiYW0ifQ.p1_TzIeTiKsE21GCBwIoiIV9twFUj5jPQiBPGcTuWI1V57OQrTlZN-nO2JMnG1aBbPzq8sfUkCLde99CPOg8Ww"))
-
-//    expect: "Status is 200 and the response is 'Hello world!'"
-//      mvc.perform(post('/api/kafka/publish').content(toJson(request)))
-//        .andExpect(status().isOk())
-//        .andReturn()
-//        .response
-//        .contentAsString == "Hello world!"
-//  }
 
 //  @Autowired
 //  User user
-//  def "should pass producer details to domain component"() {
-//
+//  def "when post is performed the url and buttons are set"() {
 //    given:
 //      Map request = [
 //        url     : 'https://www.spockUrlTest.com',
@@ -119,7 +70,6 @@ class UnitSpecification extends Specification {
 //    then:
 //      results.andExpect(jsonPath('$.url').value('https://www.spockUrlTest.com'))
 //      results.andExpect(jsonPath('$.button').value('spockButtonTest'))
-//
 //  }
 
 }
