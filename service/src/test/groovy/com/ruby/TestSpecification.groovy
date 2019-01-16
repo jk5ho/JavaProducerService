@@ -13,4 +13,5 @@ class TestSpecification extends Specification {
     then:
       result == 3
   }
+
 }
