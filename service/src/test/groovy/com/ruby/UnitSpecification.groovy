@@ -50,26 +50,4 @@ class UnitSpecification extends Specification {
     then:
       1 * kafkaTemplate.send('users', new User(url, button))
   }
-
-
-//  @Autowired
-//  User user
-//  def "when post is performed the url and buttons are set"() {
-//    given:
-//      Map request = [
-//        url     : 'https://www.spockUrlTest.com',
-//        button  : 'spockButtonTest'
-//      ]
-//
-//    and:
-//      new User('https://www.spockUrlTest.com', 'spockButtonTest') >> producer.sendMessage('https://www.spockUrlTest.com', 'spockButtonTest')
-//
-//    when:
-//      def results = mvc.perform(post('/api/kafka/publish').contentType(APPLICATION_JSON).content(toJson(request)))
-//
-//    then:
-//      results.andExpect(jsonPath('$.url').value('https://www.spockUrlTest.com'))
-//      results.andExpect(jsonPath('$.button').value('spockButtonTest'))
-//  }
-
 }
